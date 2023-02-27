@@ -20,7 +20,7 @@ let landOn = true
 let landI = 2;
 setInterval(() => {
   if (landOn) {
-    land.style.backgroundImage = `url("../media/0${landI}.jpg")`
+    land.style.backgroundImage = `url("media/0${landI}.jpg")`
     landI = landI%5 +1
   }
 }, 10000)
