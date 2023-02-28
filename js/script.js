@@ -104,5 +104,21 @@ window.addEventListener("scroll", () => {
 });
 
 
+// .popup-img
 
+let imgs= document.querySelectorAll("#gallery img")
+let popupImg= document.querySelector(".popup-img img")
+let closeImg= document.querySelector(".popup-img .img span")
+let imgTitle= document.querySelector(".popup-img h2")
 
+imgs.forEach(e=>{
+  e.addEventListener("click",()=>{
+    popupImg.setAttribute("src",e.getAttribute("src"))
+    imgTitle.innerHTML = e.getAttribute("alt")
+    popupImg.parentElement.parentElement.style.display="flex"
+  })
+})
+
+closeImg.addEventListener("click",()=>{
+  popupImg.parentElement.parentElement.style.display="none"
+})
